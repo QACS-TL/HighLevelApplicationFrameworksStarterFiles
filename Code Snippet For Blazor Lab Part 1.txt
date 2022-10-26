@@ -1,0 +1,17 @@
+<!-- Code for part 1 -->
+<!--  Using data from input boxes -->
+@page "/inputs"
+
+<h1>Inputs</h1>
+
+<input type="text" placeholder="Name" @bind="name">
+<input type="number" placeholder="Age" @bind="age">
+
+@if (!string.IsNullOrEmpty(name) && age != null) {
+ <p>Hello @name, you are @age years old!</p>
+}
+
+@code {
+    private string name;
+    private int? age;
+}
